@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка Фотоизображения в БД</title>
+    <link rel="stylesheet" href="/static/styles_upload.css">
+
+</head>
+<body>
+    <h1>Загрузите фотоизображениеㅤㅤㅤ</h1>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <label for="photo">Выберите фото:</label>
+        <input type="file" id="photo" name="photo" required><br><br>
+        <label for="comment">Комментарий:</label>
+        <input type="text" id="comment" name="comment"><br><br>
+        <button type="submit">Загрузить</button>
+    </form>
+</body>
+</html>
